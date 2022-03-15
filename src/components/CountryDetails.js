@@ -10,9 +10,9 @@ const CountryDetails = () => {
   const [myCountry, setMyCountry] = useState([]);
 
   const fetchSingleCountry = async () => {
-    const req = await fetch(BASE_URL);
-    const res = await req.json();
-    const result = Object.values(res.dates[currentDate].countries);
+    const request = await fetch(BASE_URL);
+    const response = await request.json();
+    const result = Object.values(response.dates[currentDate].countries);
     setMyCountry(result);
   };
 
@@ -41,12 +41,3 @@ const CountryDetails = () => {
 };
 
 export default CountryDetails;
-
-// "today_confirmed": 176409,
-// "today_deaths": 7645,
-// "today_new_confirmed": 208,
-// "today_new_deaths": 2,
-// "today_new_open_cases": 206,
-// "today_new_recovered": 0,
-// "today_open_cases": 86178,
-// "today_recovered": 82586,}
