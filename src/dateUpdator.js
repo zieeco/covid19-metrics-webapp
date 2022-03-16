@@ -1,9 +1,10 @@
 const dateFormata = () => {
   const today = new Date();
   const dd = String(today.getDate());
-  const mm = String(today.getMonth()).padStart(2, '0');
+  const mm = today.getMonth() + 1;
+  const mm2 = String(mm).padStart(2, '0');
   const yyyy = today.getFullYear();
-  return `${yyyy}-${mm}-${dd}`;
+  return `${yyyy}-${mm2}-${dd}`;
 };
 
 const currentDate = dateFormata();

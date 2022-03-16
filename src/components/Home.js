@@ -1,8 +1,12 @@
+/* eslint-disable react/jsx-no-undef */
 import React, { useEffect } from 'react';
+import { FaRegArrowAltCircleRight } from 'react-icons/fa';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import countryMapSource from '../countryData/countryMaps';
 import { fetchCountriesFromAPI } from '../redux/countries/countries';
+import BaseCountry from './BaseCountry';
+import Form from './Form';
 
 const Home = () => {
   const countries = useSelector((state) => state.countriesReducer);
@@ -13,30 +17,30 @@ const Home = () => {
   }, []);
 
   return (
-    <ul>
-      { countries.length > 0 ? countries.map((country) => {
-        const countryMap = countryMapSource(country.name);
-        return (
-          <li key={country.id}>
-            <Link to={{ pathname: country.name }}>
-              <img src={countryMap} alt="country map" />
-              <p>{country.name}</p>
-              <p>{country.today_confirmed}</p>
-            </Link>
-          </li>
-        );
-      }) : ''}
-    </ul>
+    <section className="countries">
+      <BaseCountry />
+      <Form />
+      <ul className="country-list">
+        { countries.length > 0 ? countries.map((country) => {
+          const countryMap = countryMapSource(country.name);
+          const floatNumber = parseFloat(country.today_confirmed);
+          const floatNumberFormat = floatNumber.toLocaleString('en');
+          return (
+            <li key={country.id} className="country-list-item">
+              <Link to={{ pathname: country.name }}>
+                <FaRegArrowAltCircleRight className="arrow mb-1" />
+                <div className="map-box">
+                  <img src={countryMap} alt="country map" className="map-images" />
+                </div>
+                <p className="country-info fw fs-1">{country.name.toUpperCase()}</p>
+                <p className="country-info mb-1 fs-1">{floatNumberFormat}</p>
+              </Link>
+            </li>
+          );
+        }) : ''}
+      </ul>
+    </section>
   );
 };
 
 export default Home;
-
-// "today_confirmed": 176409,
-// "today_deaths": 7645,
-// "today_new_confirmed": 208,
-// "today_new_deaths": 2,
-// "today_new_open_cases": 206,
-// "today_new_recovered": 0,
-// "today_open_cases": 86178,
-// "today_recovered": 82586,}

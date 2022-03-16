@@ -242,7 +242,6 @@ const countryCodes = {
 
 const countryMapSource = (country) => {
   const code = countryCodes[country];
-  console.log('i stubborn', code);
   let mapSource = '';
   if (code !== undefined) {
     mapSource = `https://raw.githubusercontent.com/rachidelaid/worldMaps/main/maps/${code.toLowerCase()}/vector.svg`;
