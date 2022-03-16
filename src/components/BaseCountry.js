@@ -21,7 +21,7 @@ const BaseCountry = () => {
         return (
           <div key={country.id} className="base-ng flex">
             <div className="ng-box flex">
-              <img src={myUrl} alt="nigeria map" className="ng-img map-images" />
+              <img src={myUrl} alt={`${country.name}'s map`} className="ng-img map-images" />
             </div>
             <div className="ng-body flex">
               <p className="fw fs-1">{country.name.toUpperCase()}</p>

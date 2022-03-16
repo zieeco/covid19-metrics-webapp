@@ -36,7 +36,7 @@ const CountryDetails = () => {
         const h = parseInt(country.today_recovered, 10);
         const sum = a + b + c + d + e + f + g + h;
         return (
-          <li key={country.id} className="country-detail-list">
+          <li key={country.id} className="country-detail-list flex">
             <div className="country-detail-wrapper flex">
               <div className="country-detail-img-box flex">
                 <img className="map-images" src={countryMap} alt={`${country.name} images`} />
@@ -47,34 +47,31 @@ const CountryDetails = () => {
                 <p className="fw mb-ii">{country.source}</p>
               </div>
             </div>
-            <div className="country-detail-body">
-              <p>{country.name}</p>
-              <p>
+            <div className="country-detail-body d-flex">
+              <p className="country-detail-summary-text">
                 Today Confirmed Cases:
                 {' '}
                 <span>{parseFloat(country.today_confirmed).toLocaleString('en')}</span>
               </p>
-              <p>
+              <p className="country-detail-summary-text">
                 Today Opened Cases:
                 {' '}
                 <span>{parseFloat(country.today_open_cases).toLocaleString('en')}</span>
               </p>
-              <p>
+              <p className="country-detail-summary-text">
                 Today Death Cases:
                 {' '}
                 <span>{parseFloat(country.today_deaths).toLocaleString('en')}</span>
               </p>
-              <p>
+              <p className="country-detail-summary-text">
                 Total Cases:
                 {' '}
                 <span>{parseFloat(sum).toLocaleString('en')}</span>
               </p>
             </div>
-
           </li>
         );
       })}
-
     </ul>
   );
 };

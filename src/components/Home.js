@@ -30,7 +30,7 @@ const Home = () => {
               <Link to={{ pathname: country.name }}>
                 <FaRegArrowAltCircleRight className="arrow mb-1" />
                 <div className="map-box">
-                  <img src={countryMap} alt="country map" className="map-images" />
+                  <img src={countryMap} alt={`${country.name}'s map`} className="map-images" />
                 </div>
                 <p className="country-info fw fs-1">{country.name.toUpperCase()}</p>
                 <p className="country-info mb-1 fs-1">{floatNumberFormat}</p>
