@@ -4,6 +4,7 @@ import './App.css';
 import Home from './components/Home';
 import CountryDetails from './components/CountryDetails';
 import Header from './components/Header';
+import Footer from './components/Footer';
 
 const App = () => (
   <div className="App">
@@ -13,6 +14,7 @@ const App = () => (
         <Route path="/" element={<Home />} />
         <Route path="/:country" element={<CountryDetails />} />
       </Routes>
+      <Footer />
     </Router>
   </div>
 );
