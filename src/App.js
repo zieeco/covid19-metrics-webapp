@@ -6,7 +6,7 @@ import CountryDetails from './components/CountryDetails';
 import Header from './components/Header';
 
 const App = () => (
-  <div>
+  <div className="App">
     <Router>
       <Header />
       <Routes>
