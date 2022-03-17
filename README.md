@@ -10,7 +10,7 @@ This covid-19 metric webapp is an application a user can use to check the global
 
 **_Demo view_**
 
-- [Live Link](https://math-magician-calculator.herokuapp.com/)
+- [Live Link](https://pedantic-agnesi-f71bb5.netlify.app/)
 
 **_Presentation video_**
 - Watch this [video of me presenting the app and it's features](https://www.loom.com/share/6df4a62cf0f84743b941fd42d04d260a)
