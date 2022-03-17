@@ -206,10 +206,6 @@ section .country-list {
   padding: 1.25rem 0.75rem;
 }
 
-.country-detail-body p:nth-child(even) {
-  background: var(--bg-nth);
-}
-
 .country-detail-summary-text {
   font-size: 1.1875rem;
   font-weight: 700;
@@ -229,6 +225,31 @@ footer {
   align-items: center;
   justify-content: center;
   padding: 1.25rem 0.75rem;
+  background: var(--bg-nth);
+}
+
+.not-found {
+  flex-direction: column;
+  flex-wrap: wrap;
+  position: fixed;
+  width: 100%;
+  top: 57%;
+  height: 100%;
+  background-color: black;
+  align-items: center;
+  color: #c22a64;
+}
+
+.error-box {
+  text-align: center;
+  flex-direction: column;
+  font-size: 1.5rem;
+  align-items: center;
+  margin-top: 65px;
+  gap: 1.25rem;
+}
+
+.country-detail-body p:nth-child(even) {
   background: var(--bg-nth);
 }
 

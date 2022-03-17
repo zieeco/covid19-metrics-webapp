@@ -4,10 +4,9 @@ import currentDate from '../dateUpdator';
 import countryMapSource from '../countryData/countryMaps';
 
 const CountryDetails = () => {
+  const [myCountry, setMyCountry] = useState([]);
   const { country } = useParams();
   const BASE_URL = `https://api.covid19tracking.narrativa.com/api/${currentDate}/country/${country}`;
-
-  const [myCountry, setMyCountry] = useState([]);
 
   const fetchSingleCountry = async () => {
     const request = await fetch(BASE_URL);
@@ -17,9 +16,8 @@ const CountryDetails = () => {
   };
 
   useEffect(() => {
-    if (myCountry.length === 0) {
-      fetchSingleCountry();
-    }
+    const fetched = fetchSingleCountry();
+    return fetched;
   }, []);
 
   return (
