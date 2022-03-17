@@ -13,7 +13,7 @@ This covid-19 metric webapp is an application a user can use to check the global
 - [Live Link](https://math-magician-calculator.herokuapp.com/)
 
 **_Presentation video_**
-- [Live Link](https://relaxed-ride-bb9e65.netlify.app/)
+- Watch this [video of me presenting the app and it's features](https://www.loom.com/share/6df4a62cf0f84743b941fd42d04d260a)
 
 ## Built With
 
