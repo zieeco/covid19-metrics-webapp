@@ -1,13 +1,14 @@
 import currentDate from '../../dateUpdator';
 
-const BASE_COUNTRY_URL = `https://api.covid19tracking.narrativa.com/api/${currentDate}/country/nigeria`;
 const initialState = [];
 
-const NIGERIA_BASE = 'countries/baseCountry/NIGERIA_BASE';
+const BASE_COUNTRY_URL = `https://api.covid19tracking.narrativa.com/api/${currentDate}/country/nigeria`;
 
-export const loadMyBaseCountry = (nigeria) => ({
+const NIGERIA_BASE = 'baseCountry/NIGERIA_BASE';
+
+export const loadMyBaseCountry = (country) => ({
   type: NIGERIA_BASE,
-  payload: nigeria,
+  payload: country,
 });
 
 export const getNigeriaDetails = () => async (dispatch) => {
