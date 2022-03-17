@@ -28,7 +28,7 @@ const Home = () => {
       <BaseCountry />
       <Form onChange={handleChange} />
       <ul className="country-list">
-        { countries.length > 0 ? countries.map((country) => {
+        { countries.length > 0 ? countries.slice(0, 10).map((country) => {
           const countryMap = countryMapSource(country.name);
           const floatNumber = parseFloat(country.today_confirmed);
           const floatNumberFormat = floatNumber.toLocaleString('en');
@@ -37,7 +37,7 @@ const Home = () => {
               <Link to={{ pathname: country.name }}>
                 <FaRegArrowAltCircleRight className="arrow mb-1" />
                 <div className="map-box">
-                  <img src={countryMap} alt={`${country.name}'s map`} className="map-images" />
+                  <img src={countryMap} alt={`${country.name} map`} className="map-images" />
                 </div>
                 <p className="country-info fw fs-1">{country.name.toUpperCase()}</p>
                 <p className="country-info mb-1 fs-1">{floatNumberFormat}</p>
