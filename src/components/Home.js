@@ -1,6 +1,5 @@
-/* eslint-disable react/jsx-no-undef */
-import React, { useEffect } from 'react';
-import { FaRegArrowAltCircleRight } from 'react-icons/fa';
+import React, { useEffect, useState } from 'react';
+import { FaExclamationTriangle, FaRegArrowAltCircleRight } from 'react-icons/fa';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import countryMapSource from '../countryData/countryMaps';
@@ -9,17 +8,25 @@ import BaseCountry from './BaseCountry';
 import Form from './Form';
 
 const Home = () => {
-  const countries = useSelector((state) => state.countriesReducer);
+  const [searchText, setSearchText] = useState('');
+  let countries = useSelector((state) => state.countriesReducer);
   const dispatch = useDispatch();
 
+  countries = countries.filter((country) => country.name.toLowerCase().includes(searchText));
+
+  const handleChange = (e) => {
+    setSearchText(e.target.value.toLowerCase());
+  };
+
   useEffect(() => {
-    dispatch(fetchCountriesFromAPI());
+    const subscribe = dispatch(fetchCountriesFromAPI());
+    return subscribe;
   }, []);
 
   return (
     <section className="countries">
       <BaseCountry />
-      <Form />
+      <Form onChange={handleChange} />
       <ul className="country-list">
         { countries.length > 0 ? countries.map((country) => {
           const countryMap = countryMapSource(country.name);
@@ -37,7 +44,14 @@ const Home = () => {
               </Link>
             </li>
           );
-        }) : ''}
+        }) : (
+          <div className="not-found flex">
+            <div className="error-box flex">
+              <FaExclamationTriangle style={{ width: '40px', height: '40px' }} />
+              <p>No Country Found!</p>
+            </div>
+          </div>
+        )}
       </ul>
     </section>
   );
