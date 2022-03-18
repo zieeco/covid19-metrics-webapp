@@ -1,13 +1,259 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&family=Montserrat:wght@400;700;800&family=Poiret+One&family=Roboto+Slab:wght@200;300;400;500;600;700&family=Shadows+Into+Light&display=swap');
+
+:root {
+  --nav-bg: #ec4c8b;
+  --background: #f85092;
+  --color-white: #fff;
+  --bg-nth: #cf4278;
+  --bg-img: #b13968;
+  --bg-contries: #dd4983;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+* {
+  font-family: 'Lato', sans-serif;
+}
+
+body {
+  position: relative;
+  background: var(--background);
+  color: var(--color-white);
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-weight: normal;
+  font-style: normal;
+}
+
+footer,
+.country-detail,
+.countries {
+  background: var(--bg-contries);
+}
+
+.flex {
+  display: flex;
+}
+
+.align-center {
+  align-items: center;
+  justify-content: center;
+}
+
+.fw-2 {
+  font-size: 20px;
+}
+
+header {
+  background-color: var(--nav-bg);
+  width: 100%;
+  align-items: center;
+}
+
+header ul {
+  padding: 1rem 0.75rem;
+  width: 100%;
+  gap: 1.25rem;
+  justify-content: space-between;
+}
+
+.mic-cog {
+  gap: 1.25rem;
+}
+
+.base-container {
+  background: var(--bg-contries);
+}
+
+.base-ng {
+  align-items: center;
+  gap: 1.25rem;
+  padding: 1.25rem 0;
+  margin: 0 auto;
+}
+
+.ng-box,
+.country-detail-img-box {
+  width: 100px;
+}
+
+.ng-img {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.ng-body {
+  flex-direction: column;
+}
+
+footer p {
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.form-container {
+  width: 100%;
+  padding: 0.75rem;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.form-container p {
+  font-size: 0.75rem;
+}
+
+form {
+  flex: 1;
+}
+
+form input {
+  width: 100%;
+  padding: 0.75rem 1rem 0.75rem 0.9375rem;
+  border-radius: 4px;
+  text-align: center;
+  background: inherit;
+  color: inherit;
+  border: 2px solid var(--background);
+}
+
+::placeholder {
+  color: inherit;
+}
+
+section .country-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.country-list li {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0.75rem;
+}
+
+.country-list li a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.country-list li a .arrow {
+  align-self: flex-end;
+}
+
+.mb-1 {
+  margin-bottom: 0.75rem;
+}
+
+.country-list li a .country-info {
+  align-self: flex-end;
+  text-align: right;
+}
+
+.fs-1 {
+  font-size: 1.125rem;
+}
+
+.fw {
+  font-weight: bold;
+}
+
+.map-box {
+  width: 100px;
+  height: 100px;
+  margin: 0.5rem 0;
+  margin-top: -27px;
+}
+
+.map-images {
+  width: 100%;
+  height: 100%;
+  opacity: 0.1267;
+}
+
+.country-detail li {
+  flex-direction: column;
+
+  /* justify-content: space-between; */
+}
+
+.d-flex {
+  display: flex;
+  flex-direction: column;
+}
+
+.country-detail-wrapper {
+  width: 100%;
+  align-items: center;
+  gap: 1.25rem;
+  padding: 2.25rem 0.75rem;
+  justify-content: space-between;
+}
+
+.mb-ii {
+  margin-bottom: 0.5rem;
+}
+
+.country-detail-summary {
+  text-align: right;
+}
+
+.country-detail-body {
+  justify-content: space-between;
+  padding: 1.25rem 0.75rem;
+}
+
+.country-detail-summary-text {
+  font-size: 1.1875rem;
+  font-weight: 700;
+  display: flex;
+  padding: 0.88125rem 0;
+  justify-content: space-between;
+  align-items: center;
+  word-wrap: break-word;
+}
+
+.country-detail {
+  padding-bottom: 2.25rem;
+}
+
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.25rem 0.75rem;
+  background: var(--bg-nth);
+}
+
+.not-found {
+  flex-direction: column;
+  flex-wrap: wrap;
+  position: fixed;
+  width: 100%;
+  top: 57%;
+  height: 100%;
+  background-color: black;
+  align-items: center;
+  color: #c22a64;
+}
+
+.error-box {
+  text-align: center;
+  flex-direction: column;
+  font-size: 1.5rem;
+  align-items: center;
+  margin-top: 65px;
+  gap: 1.25rem;
+}
+
+.country-detail-body p:nth-child(even) {
+  background: var(--bg-nth);
+}
+
+.country-list li:nth-child(4n-1),
+.country-list li:nth-child(4n-2) {
+  background: var(--bg-nth);
 }

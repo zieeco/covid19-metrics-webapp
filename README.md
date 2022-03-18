@@ -1,70 +1,93 @@
-# Getting Started with Create React App
+# covid19-metrics-webapp
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This covid-19 metric webapp is an application a user can use to check the global pandemic(covid-19) statistics in the world.
 
-## Available Scripts
+<p align="center">
+  <img src="/src/assets/screenshot.png">
+</p>
 
-In the project directory, you can run:
+## Live Demo Link
 
-### `npm start`
+**_Demo view_**
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- [Live Link](https://pedantic-agnesi-f71bb5.netlify.app/)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+**_Presentation video_**
+- Watch this [video of me presenting the app and it's features](https://www.loom.com/share/6df4a62cf0f84743b941fd42d04d260a)
 
-### `npm test`
+## Built With
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+  ~~~ bash
+  - HTML
+  - CSS
+  - JAVASCRIPT
+  - REACT
+  ~~~
 
-### `npm run build`
+## Getting Started
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+<details>
+    <summary><b>Installation required</b></summary>
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+#### Step 0: Prerequisites
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+ - A text editor (preferably Visual Studio Code, or any code editor of your choice)
+  -  [Git](https://git-scm.com/downloads)
+  -  [Node](https://nodejs.org/en/download/)
+  - #### Clone this repository
 
-### `npm run eject`
+  To get a local copy up and running, download th zip file or follow the steps below by rnning these commands in your command line.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+~~~bash
+git clone https://github.com/zieeco/covid19-metrics-webapp.git
+~~~
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+ - Navigate to the location of the folder in your machine:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+ ~~~bash
+ cd covid19-metrics-webapp
+ ~~~
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+#### Step 0.1: Prerequisites
 
-## Learn More
+Run the following command in your terminal or command line to install the `npm` packages
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- `npm install`
+- `npm run build`
+- `npm start`
+- `npm run test`
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+<sub>To learn React, check out the [React documentation](https://reactjs.org/).
+</sub>
 
-### Code Splitting
+</details>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Authors
 
-### Analyzing the Bundle Size
+👤 **zieeco**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+- GitHub: [@Zieeco](https://github.com/zieeco)
+- Twitter [@zieecodes](https://twitter.com/zieecodes)
+- LinkedIn: [Isaac Imaobong Samuel](https://www.linkedin.com/in/isaac-imaobong-samuel)
 
-### Making a Progressive Web App
+## Credits
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## Credits
 
-### Advanced Configuration
+- Original design idea by [Nelson Sakwa on Behance](https://www.behance.net/sakwadesignstudio).
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+- Project from [Microverse](https://bit.ly/MicroverseTN) React & Redux module
 
-### Deployment
+## 🤝 Contributing
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+Contributions, issues, and feature requests are welcome!
 
-### `npm run build` fails to minify
+Feel free to check the [issues page](https://github.com/zieeco/covid19-metric-webapp/issues).
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Show your support
+
+Give a ⭐️ if you like this project!
+
+## 📝 License
+
+This project is [MIT](./MIT.md) licensed.
